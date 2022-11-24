@@ -4,18 +4,18 @@ function receivesAFunction(cb) {
 }
 console.log(receivesAFunction(function () { return 300 / 2 }));
 
-// // some random function
-// function random() {
-//     return 'Happy coding';
-// }
 
 // returnsANamedFunction
 function returnsANamedFunction() {
-    return receivesAFunction(function () { return 500 / 2 });
+   return function random() {
+    return 'Happy coding';
+   }
+   
 }
 
 const fn = returnsANamedFunction();
 console.log(fn);
+
 // returnsAnAnonymousFunction
 function returnsAnAnonymousFunction() {
     return function () {
